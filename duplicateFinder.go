@@ -6,7 +6,9 @@ import (
 )
 
 func panicOnError(err error) {
-	panic(err)
+	if err != nil {
+		panic(err)
+	}
 }
 
 func getFirstDuplicate(elements []int) int {
